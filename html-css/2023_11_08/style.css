@@ -1,0 +1,38 @@
+/* REGOLE */
+/* 
+selettore {
+    chiave: valore;
+}
+*/
+/* COLORE DEL TESTO
+color: color, #XXX, rgb(0,0,0), rgba(0,0,0,0.5) 
+*/
+
+/* h1 {
+    color: green;
+}
+.red {
+    color: red;
+}
+#blue {
+    color: blue;
+} */
+body {
+    background-color: yellow;
+}
+.square {
+    height: 300px;
+    width: 300px;
+} 
+.inline {
+    display: inline-block;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
