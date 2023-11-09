@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#logo {
+    width: 200px;
+    height: 200px;
+}
+
+img {
+    size: 200px;
+}
+
+#container {
+    height: 700px;
+    background-image: url(assets/jumbo.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: #FFF;
+    font-size: 200px;
+    letter-spacing: 20px;
+    mix-blend-mode: exclusion;
+    text-transform: uppercase;
+}
