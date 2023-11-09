@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    border: 1px solid red;
 }
 
 body {
@@ -10,10 +11,6 @@ body {
 #logo {
     width: 200px;
     height: 200px;
-}
-
-img {
-    size: 200px;
 }
 
 #container {
