@@ -1,0 +1,89 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: monospace;
+}
+
+#title {
+    margin-top: 100px;
+    margin-bottom: 160px;
+    text-align: center;
+    font-size: 72px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* colori */
+.red {
+    background-color: red;
+}
+.orange {
+    background-color: orange;
+}
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
+.black {
+    background-color: black;
+}
+
+/* opacita' */
+.opaque_8 {
+    opacity: 0.8;
+}
+.opaque_6 {
+    opacity: 0.6;
+}
+.opaque_4 {
+    opacity: 0.4;
+}
+.opaque_2 {
+    opacity: 0.2;
+}
+
+.row_container {
+    margin: 40px auto 0px auto;
+    max-width: fit-content;
+    height: 200px;
+}
+.row_container_labels {
+    margin: 0px auto;
+    max-width: fit-content;
+}
+.label {
+    border: 2px solid black;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    padding-top: calc((200px - 30px - 4px)/2);
+}
+
+footer {
+    font-size: 30px;
+    margin-top: 200px;
+    background-color: black;
+    height: 400px;
+    color: white;
+    text-align: center;
+    padding-top: calc((400px - 30px)/2);
+}
+
