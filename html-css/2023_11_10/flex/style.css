@@ -1,0 +1,43 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: aqua;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #logo, header nav {
+    font-size: 30px;
+    font-weight: bold;
+    background-color: magenta;
+}
+
+.container {
+    background-color: #ddd;
+    display: flex;
+    gap: 20px; /* spazio tra elementi */
+}
+
+aside {
+    background-color: #666;
+    width: 30%;
+    padding-left: 16px;
+}
+
+main {
+    background-color: #333;
+    color: white;
+    width: 70%;
+}
+
+footer {
+    padding: 16px;
+    background-color: aquamarine;
+}

@@ -1,0 +1,65 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: salmon;
+    padding: 20px;
+    display: flow-root;
+}
+
+#logo {
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: magenta;
+}
+
+#navigation {
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: orange;
+}
+
+section {
+    height:200px;
+    margin: 20px;
+    background-color: #ccc;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    clear: both;
+}
+
+.hero {
+    background-color: #999;
+    height: 160px;
+    margin: 20px;
+    padding: 10px;
+    float: left;
+}
+
+.image {
+    background-color: #666;
+    height: 100px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.description {
+    background-color: #666;
+    height: 100px;
+    padding: 20px;
+    margin: 50px 10px;
+    width: 75%;
+    float: left;
+}
+p {
+    scroll-behavior: auto;
+}

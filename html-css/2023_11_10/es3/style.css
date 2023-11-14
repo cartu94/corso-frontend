@@ -1,0 +1,32 @@
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: salmon;
+  padding: 20px;
+  display: flow-root;
+}
+
+footer {
+  background-color: #333;
+  padding: 20px;
+  clear: both;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: magenta;
+    margin: 20px;
+    float: left;
+    color: white;
+    font-size: 30px;
+}
+
+#n5 {
+    background-color: darkmagenta;
+}

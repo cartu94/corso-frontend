@@ -1,0 +1,60 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: salmon;
+    padding: 20px;
+    display: flow-root;
+}
+
+#logo {
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: magenta;
+}
+
+#navigation {
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: orange;
+}
+
+aside {
+    background-color: #666;
+    display: inline-block;
+    width: 30%;
+    height: 50vh;
+    margin: 20px;
+}
+
+.section-container {
+    width: 50%;
+    height: 50vh;
+    margin: 20px;
+    float: right;
+}
+
+section {
+    height:200px;
+    margin: 20px;
+}
+
+.s1 {
+    background-color: #ccc;
+}
+
+.s2 {
+    background-color: #eee;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    clear: both;
+}
