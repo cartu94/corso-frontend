@@ -1,0 +1,61 @@
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* utilities */
+.wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HEADER + NAV */
+header {
+    border-bottom: 2px solid black;
+}
+
+nav {
+    /* border: 2px solid black; */
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.menu ul {
+    display: flex;
+    margin-right: 10px;
+}
+.menu ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.jumbo {
+    background-color: palegoldenrod;
+    width: 100vw;
+    height: 200px;
+    text-align: center;
+}
+.jumbo p {
+    font-weight: bold;
+    margin: 0 25px;
+}
