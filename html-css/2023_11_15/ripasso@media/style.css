@@ -1,0 +1,23 @@
+/* Stile di base per il paragrafo */
+p {
+  font-size: 18px;
+  color: aqua;
+}
+
+/* Media query per dispositivi con larghezza massima di 600px */
+@media only screen and (min-width: 600px) {
+  /* Stile per il paragrafo */
+  p {
+    font-size: 8px;
+    color: red;
+  }
+}
+
+/* Media query per dispositivi con larghezza compresa tra 650px e 900px*/
+@media only screen and (min-width: 650px) and (max-width: 900px) {
+  /* Stile per il paragrafo */
+  p {
+    font-size: 25px;
+    color: green;
+  }
+}
