@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tailwind Es1</title>
+  </head>
+  <body class="pt-[80px] flex flex-col items-center justify-start">
+    <header class="bg-pink-600 w-full flex justify-center fixed top-0">
+      <nav class="w-5/6 bg-blue-700 h-[80px] flex justify-between items-center px-[20px]">
+        <div class="w-[60px] h-[60px] bg-red-600">X</div>
+      </nav>
+    </header>
+    <main class="flex justify-center bg-black w-full">
+      <div class="h-[calc(100vh-80px-70px)] w-5/6 flex justify-start">
+        <aside class="w-1/3 bg-slate-500 p-[20px]">
+          <div class="w-full bg-yellow-500 h-full">aside 1</div>
+        </aside>
+        <section class="w-2/3 bg-green-500 p-[20px]">
+          <div class="w-full bg-yellow-500 h-1/2">section 1</div>
+          <div class="w-full bg-yellow-500 h-1/2">section 1</div>
+        </section>
+      </div>
+    </main>
+    <footer class="bg-pink-600 w-full h-[70px] flex justify-center">
+      <div class="w-5/6 bg-blue-700 h-[70px] flex justify-between items-center px-[20px]">
+        <div class="w-[50px] h-[50px] bg-red-600">X</div>
+      </div>
+    </footer>
+  </body>
+</html>
