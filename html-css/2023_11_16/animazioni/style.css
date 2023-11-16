@@ -1,0 +1,62 @@
+@keyframes nomeAnimazione {
+  0%{
+    /* Stato iniziale */
+    background-color: aqua;
+  }
+  50%{
+    /* Stato intermedio */
+    background-color: red;
+  }
+  100%{
+    /* Stato finale */
+    background-color: violet;
+  }
+}
+
+@keyframes altraAnimazione {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes traslazione {
+  0%{
+    /* Stato iniziale */
+    transform: translate(0,0);
+  }
+  50%{
+    /* Stato intermedio */
+    transform: translate(50px,20px) rotate(45deg) scale(1.5);
+  }
+  100%{
+    /* Stato finale */
+    transform: translate(0,0);
+  }
+}
+
+.da-animare {
+  /* animation: nomeAnimazione 1s ease-in-out; */
+  background-color: black;
+  height: 50vh;
+  width: 50vw;
+}
+/* .da-animare:hover {
+  animation: altraAnimazione 1s ease-in-out;
+  transform: scale(1.5);
+} */
+.da-animare:active {
+  animation: traslazione 1s ease-in-out;
+}
+
+/* 
+linear = animazione velocita' costante
+ease = inizia lentamente, accelera e poi rallenta
+ease-in = inizia lentamente e accelera
+ease-out = inizia velocemente e rallenta
+ease-in-out = inizia lentamente, accelera e poi rallenta
+cubic-bezier(x1, y1, x2, y2) = curva di bezier personalizzata punti di accelerazione e decelerazione
+*/
