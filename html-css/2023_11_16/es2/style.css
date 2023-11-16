@@ -1,0 +1,27 @@
+.rettangolo {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-top: 5px solid purple;
+    border-bottom: 5px solid purple;
+    border-left: 5px solid yellow;
+    border-right: 5px solid yellow;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: animazione 2s ease-in-out infinite alternate;
+}
+
+@keyframes animazione {
+    from {
+        background-color: orange;
+    }
+
+    to {
+        background-color: blue;
+    }
+}

@@ -1,0 +1,32 @@
+.rettangolo {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border: 1px solid white;
+    border-radius: 100%;
+    animation: animazione 3s ease-in-out infinite;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    height: 100vh;
+}
+
+@keyframes animazione {
+    0% {
+        transform: translate(0, 0);
+    }
+    
+    50% {
+        transform: translate(200px, 200px);
+        opacity: 0;
+    }
+
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
