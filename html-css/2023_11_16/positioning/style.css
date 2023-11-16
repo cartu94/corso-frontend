@@ -8,18 +8,13 @@
 body {
   background-color: #ccc;
   height: 300vh;
+  padding-top: 70px; /* per compensare l'altezza del nav */
 }
 
-.flex {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .container {
   background-color: #fff;
   width: 800px;
-  position: relative;
+  position: relative; /* perche' i figli abbiano posizione assoluta */
 }
 
 .box {
@@ -29,12 +24,12 @@ body {
 }
 .box-1 {
   background-color: magenta;
-  /* position: relative; */
+  /* position: relative; */ /* relativo al contenitore */
   /* top: 100px; */
 }
 .box-2 {
   background-color: lime;
-  position: absolute;
+  position: absolute; 
   left: 0;
   top: 0;
 }
