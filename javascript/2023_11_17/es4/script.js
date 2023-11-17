@@ -2,12 +2,17 @@
 Creare un programma che utilizzi un do-while per chiedere ad un 
 utente un numero segreto fino a che non lo indovina
 */
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+}
 
-let numeroSegreto = 5;
+let numeroSegreto = getRandomInt(1, 100);
 
 let found = false;
 do{
-    var numeroUtente = parseInt(prompt("Inserisci un numero: "));
+    var numeroUtente = prompt("Inserisci un numero: ");
     if(numeroUtente == numeroSegreto) {
         console.log("Hai indovinato!");
         found = true;
