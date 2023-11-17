@@ -8,15 +8,11 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
 }
 
-let numeroSegreto = getRandomInt(1, 100);
-
-let found = false;
+let numeroSegreto = getRandomInt(1, 10);
+let testo = "Inserisci un numero";
 do{
-    var numeroUtente = prompt("Inserisci un numero: ");
-    if(numeroUtente == numeroSegreto) {
-        console.log("Hai indovinato!");
-        found = true;
-    } else {
-      console.log("Ritenta!" + (numeroUtente > numeroSegreto ? " Il numero è più piccolo" : " Il numero è più grande"));
-    }
-} while(!found);
+    var numeroUtente = prompt(testo);
+    testo = "Ritenta!" + (numeroUtente > numeroSegreto ? " Il numero è più piccolo" : " Il numero è più grande")
+} while(numeroSegreto != numeroUtente);
+console.log("Hai indovinato! Il numero segreto era " + numeroSegreto);
+document.write("Hai indovinato! Il numero segreto era " + numeroSegreto);
