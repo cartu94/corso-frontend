@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body class="bg-slate-300">
+    <!-- container -->
+    <div class="container mx-auto px-[20px] text-white">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center mx-auto my-[100px] "
+      >
+        <div
+          onclick="changeBgColor('red')"
+          class="hover:bg-black border flex w-full md:w-auto mt-[20px] md:mt-0 justify-center items-center px-[20px] py-[10px] bg-red-500 rounded-lg uppercase shadow-xl"
+        >
+          red
+        </div>
+        <div
+          onclick="changeBgColor('yellow')"
+          class="hover:bg-black border flex w-full md:w-auto mt-[20px] md:mt-0 justify-center items-center px-[20px] py-[10px] bg-yellow-500 rounded-lg uppercase shadow-xl"
+        >
+          yellow
+        </div>
+        <div
+          onclick="changeBgColor('green')"
+          class="hover:bg-black border flex w-full md:w-auto mt-[20px] md:mt-0 justify-center items-center px-[20px] py-[10px] bg-green-500 rounded-lg uppercase shadow-xl"
+        >
+          green
+        </div>
+      </div>
+
+      <!-- box che cambia colore -->
+      <div
+        id="box"
+        class="border rounded-lg flex justify-center items-center uppercase md:w-[200px] h-[200px] mx-auto shadow-xl"
+      >
+        box
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
