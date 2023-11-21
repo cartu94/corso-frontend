@@ -1,0 +1,57 @@
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+header {
+  background-color: #ddd;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 0 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+header nav a.active {
+  color: #ff247e;
+  transform: scale(1.15);
+  cursor: default;
+  pointer-events: none;
+}
+
+header nav a:not([class="active"]):hover {
+  color: #ff247e;
+  transform: scale(1.15);
+}
+
+header nav a:not([class="active"])::after {
+  transition: all 0.2s ease;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.1rem;
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  background-color: #ff247e;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
