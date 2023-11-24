@@ -122,21 +122,21 @@ let book = {
 // 13. Shopping List
 let shoppingList = {
   items : [],
-  addItem : function(item) {
-    this.items.push(item);
+  addItem : function(...item) {
+    this.items.push(...item);
   },
-  removeItem : function(item) {
-    let index = this.items.indexOf(item);
-    if(index > -1) {
-      this.items.splice(index, 1);
+  removeItem : function(...item) {
+    for(let el of item) {
+      let index = this.items.indexOf(el);
+      if(index > -1) {  // if item is found
+        this.items.splice(index, 1);
+      }
     }
   }
 }
-shoppingList.addItem("Apple");
-shoppingList.addItem("Orange");
-shoppingList.addItem("Banana");
+shoppingList.addItem("Apple","Orange","Banana","Milk","Bread");
 // console.log(shoppingList.items);
-shoppingList.removeItem("Orange");
+shoppingList.removeItem("Orange","Milk");
 // console.log(shoppingList.items);
 
 // 14. Budget Calculator
@@ -149,8 +149,11 @@ let budgetCalculator = {
   addExpense : function(expense) {
     this.expenses += expense;
   },
+  countBalance : function() {
+    return this.income - this.expenses;
+  },
   displayResume : function() {
-    return `Income: ${this.income}, Expenses: ${this.expenses}`;
+    return `Income: ${this.income}, Expenses: ${this.expenses}, Balance: ${this.countBalance()}`;
   }
 }
 
