@@ -24,8 +24,8 @@ function nameLengths(names) {
 // 3. Shopping Cart Management
 let cart = {
   products : [],
-  addProduct : function(product) {
-    this.products.push(product);
+  addProduct : function(...product) {
+    this.products.push(...product);
   },
   calculateTotal : function() {
     return this.products.length;
@@ -183,8 +183,12 @@ let createPlaylist = function(name) {
     },
     removeSong : function(...song) {
       for(let el of song) {
-        let index = this.songs.indexOf(el);
-        if(index > -1) {
+        let index = this.songs.findIndex(
+          (item) => item.title === el.title &&
+            item.artist === el.artist &&
+            item.duration === el.duration
+        );
+        if(index > -1) {  // if item is found
           this.songs.splice(index, 1);
         }
       }
@@ -205,13 +209,16 @@ let createPlaylist = function(name) {
 
 let song1 = createSong("The Hobbit", "Blind Guardian", "5:53");
 let song2 = createSong("The Bard's Song", "Blind Guardian", "3:10");
+let song4 = createSong("The Bard's Song", "Blind Guardian", "3:10");
 let song3 = createSong("The Last Candle", "Blind Guardian", "6:03");
 let playlist = createPlaylist("Blind Guardian");
-// console.log(playlist.displayPlaylist());
+console.log(playlist.displayPlaylist());
 playlist.addSong(song1);
 playlist.addSong(song2);
 playlist.addSong(song3);
-// console.log(playlist.displayPlaylist());
+console.log(playlist.displayPlaylist());
+playlist.removeSong(song4);
+console.log(playlist.displayPlaylist());
 
 // 16. Calories Calculator
 let caloriesCalculator = {
