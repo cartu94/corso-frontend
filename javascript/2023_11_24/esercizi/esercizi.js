@@ -178,13 +178,15 @@ let createPlaylist = function(name) {
   return {
     name : name,
     songs : [],
-    addSong : function(song) {
-      this.songs.push(song);
+    addSong : function(...song) {
+      this.songs.push(...song);
     },
-    removeSong : function(song) {
-      let index = this.songs.indexOf(song);
-      if(index > -1) {
-        this.songs.splice(index, 1);
+    removeSong : function(...song) {
+      for(let el of song) {
+        let index = this.songs.indexOf(el);
+        if(index > -1) {
+          this.songs.splice(index, 1);
+        }
       }
     },
     displayPlaylist : function() {
