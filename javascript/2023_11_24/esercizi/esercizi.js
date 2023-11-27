@@ -56,13 +56,7 @@ let string = "Hello World!";
 // 6. Filter Even Numbers
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let filterEvenNumbers = function(numbers) {
-  let evenNumbers = [];
-  for(let number of numbers) {
-    if(number % 2 == 0) {
-      evenNumbers.push(number);
-    }
-  }
-  return evenNumbers;
+  return numbers.filter((number) => number % 2 == 0);
 }
 // console.log(filterEvenNumbers(numbers));
 
@@ -86,8 +80,7 @@ let exchangeRateEur = 0.91671401;
 
 // 9. Age Calculator
 let calculateAge = function(birthYr) {
-  let currentYr = new Date().getFullYear();
-  return currentYr - birthYr;
+  return new Date().getFullYear() - birthYr;
 }
 let birthYr = 1994;
 // console.log(calculateAge(birthYr));
@@ -114,7 +107,7 @@ let book = {
   year : 1937,
   genre : "Fantasy",
   getInfo : function() {
-    return `${this.title} by ${this.author}, ${this.genre}, (${this.year})`;
+    return `${this.title} by ${this.author}, ${this.genre} (${this.year})`;
   }
 }
 // console.log(book.getInfo());
@@ -212,13 +205,13 @@ let song2 = createSong("The Bard's Song", "Blind Guardian", "3:10");
 let song4 = createSong("The Bard's Song", "Blind Guardian", "3:10");
 let song3 = createSong("The Last Candle", "Blind Guardian", "6:03");
 let playlist = createPlaylist("Blind Guardian");
-console.log(playlist.displayPlaylist());
+// console.log(playlist.displayPlaylist());
 playlist.addSong(song1);
 playlist.addSong(song2);
 playlist.addSong(song3);
-console.log(playlist.displayPlaylist());
+// console.log(playlist.displayPlaylist());
 playlist.removeSong(song4);
-console.log(playlist.displayPlaylist());
+// console.log(playlist.displayPlaylist());
 
 // 16. Calories Calculator
 let caloriesCalculator = {

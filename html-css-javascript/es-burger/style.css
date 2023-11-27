@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #554b3b;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px 60px;
+    border-radius: 15px;
+}
+.container .sub-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.container .sub-container label {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.container .sub-container input {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+}
+
+.btn {
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #f2be5a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+}
+.btn:hover {
+    background-color: #fff;
+    color: #f2be5a;
+    border: 1px solid #f2be5a;
+}
+
+#pg1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    height: fit-content;
+    display: none;
+}
+
+#pg2 {
+    width: 75%;
+    /* display: none; */
+    padding: 0;
+}
+
+#pg2 .header {
+    display: flex; 
+    justify-content: start;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f2be5a;
+    position: relative;
+    border-radius: 10px 0 0 0;
+}
+
+#pg2 .header .logo {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f2be5a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pg2 .header .logo img {
+    object-fit: contain;
+    width: 60%;
+    height: 60%;
+    object-position: center;
+    rotate: 315deg;
+}
+
+#pg2 .content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#pg2 .btn {
+    margin: 0 auto;
+}
+
+#pg2 .total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #c3415b;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+}
+#pg2 .ingredients {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+#pg2 .ingredients img {
+    width: 20px;
+    height: 20px;
+}
+#pg2 .discount-box {
+    margin: 20px 0 40px 0;
+}
+#pg2 #discount-outcome {
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: absolute;
+}
+#pg2 .ingredient-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#pg2 .ingredient-box p {
+    color: #c3415b;
+}
+
+#pg2 #discount {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+}

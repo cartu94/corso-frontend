@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Hamburger</title>
+</head>
+<body>
+   <div class="wrapper">
+      <div id="pg1" class="container">
+         <div class="sub-container">
+            <label for="">Nome</label>
+            <input type="text" name="nome" id="nome">
+         </div>
+         <div class="sub-container">
+            <label for="">Numero del tavolo</label>
+            <input type="number" min="1" name="tavolo" id="tavolo">
+         </div>
+   
+         <div id="sub" class="btn">Avanti</div>
+         
+         <!-- <h1 id="dati"></h1> -->
+      </div>
+      <div id="pg2" class="container">
+         <div class="header">
+            <h1>Los Pollos Hermanos Burgers</h1>
+            <div class="logo">
+               <img src="./assets/burger.png" alt="logo">
+            </div>
+         </div>
+         <div class="content">
+            <h2 id="burger-name"></h2>
+            <h3>Ingredients</h3>
+            <div class="ingredients">
+               <div class="ingredient-box">
+                  <img src="./assets/cheese.png" alt="cheese">
+                  <label for="cheese">Cheese</label>
+                  <input type="checkbox" name="cheese" value="0.25" class="ingredient">
+                  <p>Add</p>
+               </div>
+               <div class="ingredient-box">
+                  <img src="./assets/fried-egg.png" alt="egg">
+                  <label for="egg">Egg</label>
+                  <input type="checkbox" name="egg" value="0.40" class="ingredient">
+                  <p>Add</p>
+               </div>
+               <div class="ingredient-box">
+                  <img src="./assets/ketchup.png" alt="ketchup">
+                  <label for="ketchup">Ketchup</label>
+                  <input type="checkbox" name="ketchup" value="0.15" class="ingredient">
+                  <p>Add</p>
+               </div>
+               <div class="ingredient-box">
+                  <img src="./assets/lettuce.png" alt="lettuce">
+                  <label for="lettuce">Lettuce</label>
+                  <input type="checkbox" name="lettuce" value="0.20" class="ingredient">
+                  <p>Add</p>
+               </div>
+               <div class="ingredient-box">
+                  <img src="./assets/mustard.png" alt="mustard">
+                  <label for="mustard">Mustard</label>
+                  <input type="checkbox" name="mustard" value="0.10" class="ingredient">
+                  <p>Add</p>
+               </div>
+               <div class="ingredient-box">
+                  <img src="./assets/tomato.png" alt="tomato">
+                  <label for="tomato">Tomato</label>
+                  <input type="checkbox" name="tomato" value="0.35" class="ingredient">
+                  <p>Add</p>
+               </div>
+            </div>
+            <div class="discount-box">
+               <label for="discount">Discount Coupon</label>
+               <input type="text" name="discount" id="discount">
+               <p id="discount-outcome"></p>
+            </div>
+            <div id="calc-btn" class="btn">Calculate</div>
+         </div>
+         <div class="total">
+            <p>Your Price</p>
+            <p id="price">5.00€</p>
+         </div>
+      </div>
+   </div>
+   
+   <script src="script.js"></script>
+</body>
+</html>
