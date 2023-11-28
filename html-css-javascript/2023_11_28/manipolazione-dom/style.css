@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: lightcoral;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  border: 5px solid transparent;
+  margin-bottom: 50px;
+  user-select: none;
+}
+#btn:hover {
+  cursor: pointer;
+  background-color: coral;
+}
+#btn:active {
+  color: white;
+}
+
+#my-div {
+  background-color: lightcoral;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+#my-div.grande {
+  width: 400px;
+  height: 400px;
+}
