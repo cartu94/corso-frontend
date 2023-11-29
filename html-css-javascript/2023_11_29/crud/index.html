@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUD</title>
+</head>
+<body>
+    <!-- SEZIONE DEI POST -->
+    <h1>Blog Posts</h1>
+
+    <!-- Container dove verranno visualizzati i post -->
+    <div id="posts-container"></div>
+
+    <!-- SEZIONE PER AGGIUNGERE I POST -->
+    <h2>Aggiungi Post</h2>
+    <form id="add-post-form" action="">
+        <label for="author">Autore:</label>
+        <input type="text" id="author" required>
+
+        <label for="title">Titolo:</label>
+        <input type="text" id="title" required>
+
+        <label for="text">Testo:</label>
+        <textarea id="text" required></textarea>
+
+        <input type="submit" value="Aggiungi il post">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li{
+  list-style: none;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: 100vh;
+  gap: 10px;
+  padding-top: 120px;
+}
+
+h1 {
+  text-shadow: 0 0 1px black;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  background-color: #ddd;
+  padding: 50px 0;
+  box-shadow: 0 0 2px black;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+}
+.search input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  box-shadow: 0 0 2px black;
+}
+
+.pokemon-card{
+  box-shadow: 0 0 2px black;
+  background-color: #ddd;
+  border-radius: 8px;
+  padding: 20px 40px;
+  text-align: center;
+  width: fit-content;
+}
+
+.pokemon-card h2{
+  text-transform: uppercase;
+}
+
+.pokemon-img{
+  width: 150px;
+  height: auto;
+}
+
+.pokemon-types, .pokemon-abilities {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pokemon-types::before{
+  content: "Types: ";
+  font-weight: bold;
+  margin-right: 10px;
+}
+.pokemon-types li, .pokemon-abilities li {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.pokemon-types li:not(:first-child)::before {
+  content: "/";
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+.pokemon-abilities {
+  margin-top: 10px;
+}
+
+.pokemon-abilities::before{
+  content: "Abilities: ";
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.pokemon-abilities li:not(:first-child)::before {
+  content: "-";
+  margin: 0 5px;
+  font-weight: bold;
+  color: black;
+}
+.hidden-ability {
+  color: red;
+}

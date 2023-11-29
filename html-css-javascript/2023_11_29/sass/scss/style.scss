@@ -1,0 +1,17 @@
+$primary-color: #ddd;
+$secondary-color: #18703d;
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
+header {
+  background-color: $primary-color;
+  padding: 20px;
+  text-align: center;
+  h1 {
+    text-decoration: underline;
+  }
+}
