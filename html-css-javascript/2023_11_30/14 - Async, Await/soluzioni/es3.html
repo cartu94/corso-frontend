@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Es 3: Concatenazione di Stringhe Asincrona
+      // Scrivi una funzione concatenaStringhe che accetti due stringhe e restituisca una Promise.
+      // La Promise dovrebbe risolversi dopo 1 secondo con la concatenazione delle due stringhe.
+      // Utilizza async/await per gestire l'operazione di concatenazione in modo asincrono.
+
+      async function concatenaStringhe(str1, str2) {
+        return await new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(str1.concat(str2));
+          }, 1000);
+        });
+      }
+
+      concatenaStringhe("Concatena", "Stringhe").then((result) =>
+        console.log(result)
+      );
+    </script>
+  </body>
+</html>

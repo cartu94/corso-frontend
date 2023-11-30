@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Es 1: Calcolo della Somma
+      // Scrivi una funzione chiamata calcolaSomma che accetti due
+      // numeri e una callback. La funzione deve sommare i due
+      // numeri e passare il risultato alla callback. Crea due
+      // callback separate: una per visualizzare il risultato ed una
+      // per moltiplicare il risultato per 2.
+
+      function calcolaSomma(a, b, callback) {
+        callback(a + b);
+      }
+
+      const visualizzaRisultato = (risultato) => console.log(risultato);
+      
+      const moltiplicaPerDue = (risultato) => risultato * 2;
+
+      calcolaSomma(2, 3, visualizzaRisultato);
+      calcolaSomma(2, 3, moltiplicaPerDue);
+    </script>
+  </body>
+</html>

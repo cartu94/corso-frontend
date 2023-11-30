@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Es 2: Elaborazione di Stringhe
+      // Scrivi una funzione chiamata trasformaStringa che accetti una stringa
+      // e restituisca una Promise. La Promise dovrebbe risolversi dopo 2 secondi
+      // con una nuova stringa ottenuta dalla concatenazione della stringa
+      // originale con il messaggio " - Trasformata con successo!"
+
+      function trasformaStringa(stringa) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const nuovaStringa = stringa + " - Trasformata con successo!";
+            resolve(nuovaStringa);
+          }, 2000);
+        });
+      }
+
+      trasformaStringa("Sono una stringa").then((result) =>
+        console.log(result)
+      );
+    </script>
+  </body>
+</html>

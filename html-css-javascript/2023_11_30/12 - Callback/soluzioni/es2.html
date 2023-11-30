@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Es 2: Filtraggio di Elementi
+      // Scrivi una funzione chiamata filtraNumeri che
+      // accetti un array di numeri e una callback di filtro.
+      // La funzione deve utilizzare la callback per filtrare
+      // l'array e restituire un nuovo array contenente solo
+      // gli elementi che soddisfano il criterio definito dalla
+      // callback. Crea due callback separate: una per restituire
+      // i numeri pari e una per restituire i numeri maggiori
+      // di 10.
+
+      function filtraNumeri(array, callback) {
+        return callback(array);
+      }
+
+      const filtraPari = (array) => array.filter((element) => element % 2 === 0);
+    
+      const filtraMaggioriDi10 = (array) => array.filter((element) => element > 10);
+
+      const array = [1, 2, 3, 4, 10, 15, 20, 25, 30];
+      console.log(filtraNumeri(array, filtraPari));
+      console.log(filtraNumeri(array, filtraMaggioriDi10));
+    </script>
+  </body>
+</html>

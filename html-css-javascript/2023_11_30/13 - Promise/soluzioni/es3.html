@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Es 3: Simulazione di Errore
+      // Scrivi una funzione chiamata simulaErrore che restituisca una Promise.
+      // La Promise deve respingersi immediatamente con un messaggio di errore
+      // personalizzato, ad esempio "Errore durante l'esecuzione dell'operazione".
+
+      function simulaErrore() {
+        return new Promise((resolve, reject) => {
+          reject("Errore durante l'esecuzione dell'operazione");
+        });
+      }
+
+      simulaErrore().catch((error) => console.error(error));
+    </script>
+  </body>
+</html>

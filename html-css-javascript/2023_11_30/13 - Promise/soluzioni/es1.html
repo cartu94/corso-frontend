@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Es 1: Recupero Dati da un Server
+      // Scrivi una funzione chiamata `recuperaDati` che simula
+      // il recupero di dati da un server. La funzione deve
+      // restituire una Promise che, dopo 3 secondi, si risolve
+      // con un oggetto contenente dati immaginari
+      // (ad esempio, `{ risultato: "Dati recuperati con successo!" }`).
+
+      function recuperaDati() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const dati = { risultato: "Dati recuperati con successo!" };
+            resolve(dati);
+          }, 3000);
+        });
+      }
+
+      recuperaDati().then((risultato) => console.log("Successo:", risultato));
+    </script>
+  </body>
+</html>

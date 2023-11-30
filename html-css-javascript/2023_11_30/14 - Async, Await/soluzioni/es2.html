@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Es 2: Elaborazione di Dati
+      // Scrivi una funzione elaboraDati che accetti un oggetto contenente dati e
+      // restituisca una Promise. La Promise dovrebbe risolversi dopo 2 secondi
+      // con un nuovo oggetto ottenuto dalla manipolazione dei dati originali
+      // (ad esempio, aggiungendo un campo "modificato: true").
+      // Utilizza async/await per gestire l'elaborazione asincrona dei dati.
+
+      let object = {
+        dati: "Sono un dato",
+      };
+      async function elaboraDati(obj) {
+        return await new Promise((resolve) => {
+          setTimeout(() => {
+            resolve({ ...obj, modificato: true });
+          }, 2000);
+        });
+      }
+
+      elaboraDati(object).then((result) => {
+        console.log(`Init obj:`, object);
+        console.log(`Result:`, result);
+      });
+    </script>
+  </body>
+</html>

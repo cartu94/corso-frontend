@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Es 3: Manipolazione di Stringhe
+      // Scrivi una funzione chiamata trasformaStringhe
+      // che accetti un array di stringhe e una callback
+      // di manipolazione. La funzione deve utilizzare la
+      // callback per manipolare ogni stringa nell'array
+      // e restituire un nuovo array contenente le stringhe
+      // trasformate. Crea due callback separate: una per
+      // convertire le stringhe in maiuscolo e una per
+      // aggiungere "!!!" alla fine di ogni stringa,
+      // ottenendo così una versione esclamativa di ogni stringa.
+
+      function trasformaStringhe(array, callback) {
+        return callback(array)
+      }
+      const trasformaMaiuscolo = (array) => array.map((el) => el.toUpperCase());
+      
+      const trasformaEsclamativo = (array) => array.map((el) => el += "!!!")
+      
+      const array = ["abc", "def", "ghi"];
+      console.log(trasformaStringhe(array, trasformaMaiuscolo));
+      console.log(trasformaStringhe(array, trasformaEsclamativo));
+
+    </script>
+  </body>
+</html>

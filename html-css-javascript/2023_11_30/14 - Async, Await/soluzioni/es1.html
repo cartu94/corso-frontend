@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Es 1: Recupero Dati da una API
+      // Scrivi una funzione recuperaDatiDaAPI che simula il recupero di dati
+      // da una API remota. La funzione deve restituire una Promise che si
+      // risolve dopo 3 secondi con un oggetto contenente dati immaginari
+      // (ad esempio, { risultato: "Dati dalla API" }).
+      // Utilizza async/await per gestire l'operazione asincrona.
+
+      async function recuperaDatiDaAPI() {
+        return await new Promise((resolve) =>
+          setTimeout(() => {
+            resolve({ risultato: "Dati dalla API" });
+          }, 3000)
+        );
+      }
+
+      recuperaDatiDaAPI().then((result) => console.log(result));
+    </script>
+  </body>
+</html>
