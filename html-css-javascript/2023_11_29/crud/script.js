@@ -40,8 +40,21 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3>${post.title}</h3>
         <p>Autore: ${post.author}</p>
         <p>${post.text}</p>
-        <button>Rimuovi</button>
-        <button>Modifica</button>
+        <button onclick="removePost(${post.id})">Rimuovi</button>
+        <button onclick="editPost(${post.id})">Modifica</button>
+        <div id="edit-form-${post.id}" style="display: none;">
+          <h4>Modifica il post</h4>
+          <form onsubmit="saveEditedPost(event, ${post.id})">
+            <label for="editedAuthor">Nuovo Autore</label>
+            <input type="text" id="editedAuthor" value="${post.author}" required>
+            <label for="editedTitle">Nuovo Titolo</label>
+            <input type="text" id="editedTitle" value="${post.title}" required>
+            <label for="editedText">Nuovo Testo</label>
+            <textarea id="editedText" required>${post.text}</textarea>
+            <button type="submit">Salva</button>
+            <button onclick="cancelEdit(edit-form-${post.id})">Annulla</button>
+          </form>
+        </div>
       `;
       // Aggiungo il div al container
       postContainer.appendChild(postDiv);
@@ -61,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
       id: postsData.posts.length + 1,
       author: document.getElementById("author").value,
       title: document.getElementById("title").value,
-      text: document.getElementById("text").value
+      text: document.getElementById("text").value,
     };
     // Aggiungo il nuovo post all'array dei post
     postsData.posts.push(newPost);
@@ -71,5 +84,44 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("text").value = "";
     // Aggiorno la pagina
     showPosts(postsData.posts);
+  }
+
+  window.removePost = function (id) {
+    postsData.posts.splice(
+      postsData.posts.findIndex((item) => item.id == id),
+      1
+    );
+    // Aggiorno la pagina
+    showPosts(postsData.posts);
+    console.log(postsData.posts);
+  };
+
+  window.editPost = function (id) {
+    const editForm = document.getElementById(`edit-form-${id}`);
+    editForm.style.display = "block";
+    saveEditedPost('click', id);
+  }
+
+  function saveEditedPost(event, id) {
+    event.preventDefault();
+    const editedAuthor = document.getElementById("editedAuthor").value;
+    const editedTitle = document.getElementById("editedTitle").value;
+    const editedText = document.getElementById("editedText").value;
+
+    const editedPost = postsData.posts.find((post) => post.id === id);
+
+    editedPost.author = editedAuthor.value;
+    editedPost.title = editedTitle.value;
+    editedPost.text = editedText.value;
+    
+    cancelEdit(id);
+
+    showPosts(postsData.posts);
+  }
+
+
+  window.cancelEdit = function (id) {
+    const editForm = document.getElementById(`edit-form-${id}`);
+    editForm.style.display = "none";
   }
 });

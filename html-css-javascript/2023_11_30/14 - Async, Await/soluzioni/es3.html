@@ -13,16 +13,20 @@
       // Utilizza async/await per gestire l'operazione di concatenazione in modo asincrono.
 
       async function concatenaStringhe(str1, str2) {
-        return await new Promise((resolve) => {
+        return await new Promise((resolve, reject) => {
           setTimeout(() => {
-            resolve(str1.concat(str2));
+            try {
+              resolve(str1.concat(str2));
+            } catch {
+              reject("Non e' una stringa");
+            }
           }, 1000);
         });
       }
 
-      concatenaStringhe("Concatena", "Stringhe").then((result) =>
-        console.log(result)
-      );
+      concatenaStringhe("Concatena", "Stringhe")
+        .then((result) => console.log(result))
+        .catch((error) => console.error(error));
     </script>
   </body>
 </html>
