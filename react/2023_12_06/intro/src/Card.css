@@ -1,0 +1,23 @@
+div.card {
+  border: 2px solid black;
+  width: fit-content;
+  padding: 0 30px 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+p.card {
+  font-weight: bold;
+  margin-right: 15px;
+  text-align: end;
+}
+
+h1.name {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+div.dataContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+}
